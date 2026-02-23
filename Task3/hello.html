@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+
+<h1 id="welcome"></h1>
+
+<script>
+    const user = localStorage.getItem("userEmail");
+
+    if(user){
+        document.getElementById("welcome").innerText =
+        "Hello, " + user + " 👋";
+    }else{
+        // if someone opens directly without login
+        window.location.href = "login.html";
+    }
+</script>
+
+</body>
+</html>

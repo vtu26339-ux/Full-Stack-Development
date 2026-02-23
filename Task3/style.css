@@ -1,0 +1,33 @@
+.login-box{
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    min-height: 50vh;
+    justify-content: center;
+    margin: 18vh 75vh 0 75vh;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: hwb(39 87% 7%);
+    padding: 0;
+}
+.login-box input, button{
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 15px 0 5px 0;
+}
+button{
+    margin-top: 30px;
+    background-color: rgb(29, 189, 181);
+    color: white;
+    font-size: 20px;
+}
+h1{
+    font-size: 50px;
+}
+.msg{
+    margin-top: 15px;
+    margin-bottom: 0px;
+    color: red;
+}
