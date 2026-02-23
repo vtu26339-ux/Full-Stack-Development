@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Data Retrieval & Storing Dashboard</h1>
+    <div class="details">
+        <button class="name" onclick="sortByName()"> Sort By Name</button>
+        <button class="date" onclick="sortByDOB()"> Sort By Date</button>
+
+
+        <select id="deptFilter">
+            <option value="all">All Departments</option>
+            <option value="CSE">CSE</option>                    
+            <option value="IT">IT</option>
+            <option value="ECE">ECE</option>
+            <option value="AERO">AERO</option>
+            <option value="EEE">EEE</option>
+            <option value="AIML">AIML</option>
+        </select>
+
+        <button id="countBtn" class="date">Count of Students by dept</button>
+
+        
+    </div>
+    <div class="solution">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Department</th>
+                        <th>DOB</th>
+                    </tr>
+                </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    <div class="count">
+        <h3 class="hide">Department Count</h3>
+        <ul id="countList"></ul>
+    </div>
+    
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>Student Dashboard</h2>
+
+<select id="deptFilter">
+    <option value="all">All Departments</option>
+    <option value="CSE">CSE</option>
+    <option value="IT">IT</option>
+    <option value="ECE">ECE</option>
+</select>
+
+<button onclick="sortByName()">Sort by Name</button>
+<button onclick="sortByDOB()">Sort by DOB</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>DOB</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody"></tbody>
+</table>
+
+<h3>Department Count</h3>
+<ul id="countList"></ul>
+
+
+</body>
+<script src="script.js"></script>
+</html> -->
+

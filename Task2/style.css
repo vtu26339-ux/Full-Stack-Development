@@ -1,0 +1,25 @@
+.details{
+    min-width: 90vw;
+    margin: 10px 0px 30vh 0px;
+    background-color: rgb(232, 224, 213);
+    display: flex;
+    justify-content: space-around;
+}
+h1{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.name, .date,#deptFilter{
+    background-color: green;
+    color: white;
+    min-width: 150px;
+    min-height: 50px;
+    font-size: 18px;
+    padding: 0;
+    margin: 35px 30px ;
+ 
+}
+.hide{
+    visibility: hidden;
+}
