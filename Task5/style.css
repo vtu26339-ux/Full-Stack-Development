@@ -1,0 +1,80 @@
+/* Page background */
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg,#0f172a,#1e3a8a);
+}
+
+/* Payment card */
+.container{
+    width:360px;
+    background:white;
+    padding:30px;
+    border-radius:12px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+    text-align:center;
+}
+
+/* Heading */
+h2{
+    margin-bottom:25px;
+    color:#1e3a8a;
+}
+
+/* Labels */
+label{
+    display:block;
+    text-align:left;
+    margin-top:12px;
+    margin-bottom:5px;
+    font-weight:bold;
+    color:#333;
+}
+
+/* Input fields */
+input{
+    width:100%;
+    padding:12px;
+    border-radius:6px;
+    border:1px solid #ccc;
+    outline:none;
+    font-size:14px;
+    transition:0.3s;
+}
+
+/* Focus effect */
+input:focus{
+    border-color:#2563eb;
+    box-shadow:0 0 6px rgba(37,99,235,0.4);
+}
+
+/* Pay button */
+#payBtn{
+    width:100%;
+    padding:12px;
+    margin-top:20px;
+    border:none;
+    border-radius:6px;
+    background:#2563eb;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+/* Hover effect */
+#payBtn:hover{
+    background:#1d4ed8;
+}
+
+/* Message text */
+#msg{
+    margin-top:15px;
+    font-weight:bold;
+    font-size:15px;
+}
