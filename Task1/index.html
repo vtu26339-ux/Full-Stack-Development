@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body >
+    <div class="info">
+        <div class="personal-box ">
+            <h1 style="color: rgb(133, 91, 36);">Student Registration form</h2>
+                <form>
+                    <input placeholder="Fisrt Name" type="text" id="firstName">
+                    <input placeholder="Last Name" type="text" id="lastName">
+                    <input placeholder="Email" type="text" id="email">
+                    <input placeholder="Phone Number" type="text" id="phno">
+                    <input placeholder="Enter your ID(VTU no)" type="text" id="id">
+                    <select id="dept">
+                        <option> - - Select Departement - - </option>
+                        <option>CSE</option>
+                        <option>IT</option>
+                        <option>ECE</option>
+                        <option>AIML</option>
+                        <option>EEE</option>
+                        <option>AERO</option>
+
+                    </select>
+                    
+                    <input placeholder="Date of Birth" type="date" id="DOB">
+                    <div style="display: flex;">
+                        <input type="radio" style="width: 15px;" required> 
+                        <p>i accept to register</p>
+                    </div>
+                    <button class="btn"> Register </button>
+
+                    <p class="msg"></p>
+
+            </form>
+
+        </div>
+
+        
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
