@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>EventSphere | Event Lifecycle & Ticketing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<nav>
+  <div class="logo">EventSphere</div>
+  <div class="nav-links">
+    <button class="nav-btn" onclick="openLogin()">Login</button>
+    <button class="nav-btn register-btn" onclick="openRegister()">Register</button>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Discover. Create. Book.</h1>
+  <p>Your Complete Event Lifecycle & Ticketing Platform</p>
+</header>
+
+<section class="events-section">
+  <h2>Upcoming Events</h2>
+  <div id="events" class="event-grid"></div>
+</section>
+
+<!-- Auth Modal -->
+<div id="authModal" class="modal">
+  <div class="modal-content">
+
+    <!-- LOGIN FORM -->
+    <div id="loginForm">
+      <h2>Welcome Back</h2>
+      <input id="lemail" placeholder="Email">
+      <input id="lpassword" type="password" placeholder="Password">
+      <button class="primary-btn" onclick="login()">Login</button>
+      <p class="switch-text">
+        Don't have an account? 
+        <span onclick="showRegister()">Register</span>
+      </p>
+    </div>
+
+    <!-- REGISTER FORM -->
+    <div id="registerForm" style="display:none;">
+      <h2>Create Account</h2>
+      <input id="name" placeholder="Full Name">
+      <input id="email" placeholder="Email">
+      <input id="password" type="password" placeholder="Password">
+      <button class="primary-btn" onclick="register()">Register</button>
+      <p class="switch-text">
+        Already have an account? 
+        <span onclick="showLogin()">Login</span>
+      </p>
+    </div>
+
+    <button class="close-btn" onclick="closeAuth()">Close</button>
+
+    <!-- Booking Page -->
+<section id="bookingPage" style="display:none; padding:40px;">
+  <h2>Confirm Your Booking</h2>
+  <div id="bookingDetails"></div>
+  <button class="primary-btn" onclick="confirmBooking()">Confirm Booking</button>
+  <button onclick="goHome()">Cancel</button>
+</section>
+
+  </div>
+</div>
+
+<!-- BOOKING MODAL -->
+<div id="bookingModal" class="modal">
+
+  <div class="modal-content">
+
+    <h2>Book Ticket</h2>
+
+    <input id="bname" placeholder="Full Name">
+    <input id="bemail" placeholder="Email">
+    <input id="bphone" placeholder="Phone Number">
+
+    <label>Payment Status</label>
+    <select id="bpaid">
+      <option value="yes">Paid</option>
+      <option value="no">Not Paid</option>
+    </select>
+
+    <button class="primary-btn" onclick="submitBooking()">Submit</button>
+    <button class="close-btn" onclick="closeBooking()">Cancel</button>
+
+  </div>
+
+</div>
+
+<!-- BOOKING MODAL -->
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+
+    <h2>Book Ticket</h2>
+
+    <input id="bname" placeholder="Full Name">
+    <input id="bemail" placeholder="Email">
+    <input id="bphone" placeholder="Phone Number">
+
+    <select id="bpaid">
+      <option value="yes">Paid</option>
+      <option value="no">Not Paid</option>
+    </select>
+
+    <button onclick="submitBooking()">Submit</button>
+    <button onclick="closeBooking()">Cancel</button>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
