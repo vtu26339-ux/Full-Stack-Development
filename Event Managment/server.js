@@ -93,3 +93,63 @@ db.connect(err => {
     if(err) throw err;
     console.log("MySQL Connected");
 });
+
+// Delete Event API
+app.delete('/deleteevent/:id',(req,res)=>{
+
+const id = req.params.id;
+
+db.query("DELETE FROM events WHERE id=?",[id],(err)=>{
+if(err) return res.send("Error deleting");
+res.send("Event Deleted");
+});
+
+});
+
+app.get('/status',(req,res)=>{
+
+const usersQuery = "SELECT COUNT(*) AS totalUsers FROM users";
+const bookingsQuery = "SELECT COUNT(*) AS totalBookings FROM bookings";
+
+db.query(usersQuery,(err,usersResult)=>{
+if(err) return res.send(err);
+
+db.query(bookingsQuery,(err,bookingsResult)=>{
+if(err) return res.send(err);
+
+res.json({
+totalUsers: usersResult[0].totalUsers,
+totalBookings: bookingsResult[0].totalBookings
+});
+
+});
+
+});
+
+});
+
+app.get('/bookings',(req,res)=>{
+
+const sql = `
+SELECT 
+b.id,
+b.name,
+b.email,
+b.phone,
+b.paid,
+e.title AS event_name,
+e.venue,
+e.event_date
+FROM bookings b
+JOIN events e ON b.event_id = e.id
+`;
+
+db.query(sql,(err,result)=>{
+if(err){
+console.log(err);
+return res.status(500).send(err);
+}
+res.json(result);
+});
+
+});
